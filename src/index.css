@@ -1,0 +1,683 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(#6ac4db , #f1f195);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden
+  
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/*HopCoffee*/
+.header1 {
+  background: #ffffff ;
+  color: #fff;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 105px;
+  z-index: 10;
+  margin-top: 0px;
+}
+
+.logo img {
+  height: 135px;  /* ปรับขนาดของโลโก้ */
+  width: 90px;
+  margin-top: -13px;
+  border-radius: 50px;
+  justify-content: center; 
+  align-items: center; 
+  margin-left: 46%;
+  position: absolute;
+
+}
+
+
+
+
+.social-icons a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+/*Header*/
+
+header {
+  background: linear-gradient(#6ac4db , #f1f195);
+  color: #fff;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 38px;
+  z-index: 10;
+  margin-top:125px;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 80px;
+  margin-top: -15px;
+}
+
+
+
+ul {
+  list-style: none;
+  display: flex;
+  margin-left: 22%;
+  margin-top: 7px;
+  padding: 0;
+  font-size: 18px;
+  
+ 
+}
+
+li {
+  margin-left: 85px;
+
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cart-btn {
+  background-color: #259ab8;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.cart-btn:hover {
+  background-color: #44c0e3;
+}
+
+/*Responsive Design*/
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .cart-btn {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .cart-btn {
+    padding: 10px 15px;
+  }
+}
+
+/*Cart*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+ 
+  
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  width: 90%;
+  max-width: 1100px;
+ 
+  
+}
+
+.card__article {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card__article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-bottom: 2px solid #ffffff;
+}
+
+.card__data {
+  padding: 15px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card__button {
+  display: block;
+  background-color: #ff8c00;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+  background-color: #e77f00;
+}
+.text1 {
+  text-align: center;
+  font-size: 50px;
+  color: #1a1a1a;
+  font-family: 'Pacifico', cursive; /* ฟอนต์ที่มีลักษณะสดใส */
+  letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษรเล็กน้อย */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ข้อความ */
+}
+
+
+@media (max-width: 768px) {
+  .card__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .card__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*ProductCard*/
+.product-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 71%;
+  margin: 20px auto;
+  margin-top: 10%;
+  margin-left: 5%;
+  height: 195px; /* เพิ่มความสูงตรงนี้ */
+  justify-content: space-between; /* จัดตำแหน่งให้อยู่กลาง */
+}
+
+.product-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  color: #333;
+  margin-top: -60px;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 70px;
+  position: absolute;
+ 
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+ 
+  
+
+/* ปรับขนาด container1 */
+.container1 {
+  max-width: 1600px; /* ขยายความกว้าง */
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 12%;
+}
+
+/* ขยายขนาด product-item */
+.product-slider .product-item {
+  width: 350px; /* เพิ่มความกว้าง */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ขยายขนาดของภาพใน product-item */
+.product-slider .product-item img {
+  width: 100%;
+  height: 300px; /* เพิ่มความสูง */
+  object-fit: cover;
+}
+
+/* ขยายขนาดของปุ่ม Add to Cart */
+.product-slider .product-item .add-to-cart {
+  background-color: #ff7043;
+  color: white;
+  padding: 12px 20px; /* ขยายขนาดปุ่ม */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* ขยายขนาด slider */
+.slider-container {
+  position: relative;
+  width: 90%; /* ขยายขนาดให้กว้างขึ้น */
+  max-width: 800px;
+  margin: 55px auto;
+  overflow: hidden;
+  margin-top: 16%;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  
+}
+
+/* ขยายขนาดภาพใน slider */
+.slider img {
+  width: 200%; /* เพิ่มความกว้าง */
+  height: 300px; /* เพิ่มความสูง */
+  border-radius: 20px;
+}
+
+/* ขยายขนาดปุ่ม Next และ Prev */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 22px; /* เพิ่มขนาดของฟอนต์ */
+  padding: 15px 20px; /* ขยายขนาดปุ่ม */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ขยายขนาดปุ่ม Next/Prev */
+.next-btn {
+  right: 15px; /* ขยับปุ่มไปทางขวา */
+}
+
+.prev-btn {
+  left: 15px; /* ขยับปุ่มไปทางซ้าย */
+}
+
+
+/*Hop*/
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  margin-top: 5%;
+  width: 100%;
+ 
+ 
+}
+
+.card {
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.103);
+  padding: 32px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    margin-top: 7%;
+  }
+}
+
+.image {
+  width: 60%;
+  height: 60%;
+  margin-left: -110px;
+  border-radius: 12px;
+ 
+}
+
+.text-content {
+  color: #4b5563;
+  margin-left: 120px;
+}
+
+.title {
+  color: #05495a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.description {
+  margin-bottom: 16px;
+  color: #6b7280;
+}
+
+.button {
+  background-color: #f59e0b;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+}
+
+/*Footer*/
+
+
+.footer {
+  background-color: #ffffff; /* สีน้ำตาลเข้ม */
+  color:#502810;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  width: 1700px;
+  margin-left:-165px;
+  position: absolute;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* บังคับให้ทุกอย่างอยู่บรรทัดเดียวกัน */
+  gap: 2rem;
+  margin-left: 13%;
+  height: 90px;
+  
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top:50px
+
+ 
+}
+
+.footer-logo img {
+  width: 50px;
+
+}
+
+.footer-logo p {
+  font-size: 0.875rem; /* text-sm */
+  margin-top: 0.5rem;
+
+}
+
+.footer-links,
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a,
+.footer-icons a {
+  text-decoration: none;
+  color: #502810;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover,
+.footer-icons a:hover {
+  color: #ffd700; /* สีเหลืองทอง */
+}
+
+.footer-icons a {
+  font-size: 1.5rem; /* text-2xl */
+}
+
+.footer-text {
+  font-size: 0.875rem; /* text-sm */
+  margin-top: 1rem;
+  margin-left: 12%;
+}
+
+/*MwnuBar*/
+.menu-container {
+  position: fixed; /* เปลี่ยนเป็น fixed เพื่อให้เมนูอยู่กับที่เมื่อเลื่อนหน้าจอ */
+  top: 0;
+  left: 8%;
+  height: 90%; /* ให้เมนูสูงเต็มหน้าจอ */
+  z-index: 1000; /* เพิ่ม z-index ให้สูงขึ้น */
+  display: flex;
+}
+
+.menu-icon {
+  position: fixed;
+  background: none;
+  border: none;
+  color: #000000;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: absolute; /* จัดตำแหน่งไอคอนให้อยู่ในตำแหน่งที่ต้องการ */
+  top: 158px;
+  right: 20px; /* ปรับตำแหน่งไอคอน */
+}
+
+.menu-items {
+  position: fixed;
+  position: absolute;
+  top: 30%;
+  right:110px;
+  width: 200px; /* กำหนดความกว้างของเมนู */
+  height: 100%; /* ให้เมนูสูงเต็มหน้าจอ */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 15px; /* ปรับ border-radius ให้สวยงาม */
+  transform: translateX(100%); /* ซ่อนเมนูไว้ด้านนอก */
+  transition: transform 0.5s ease; /* เพิ่ม transition */
+}
+
+.menu-items.open {
+  position: fixed;
+  transform: translateX(0); /* เลื่อนเมนูเข้ามาเมื่อเปิด */
+}
+
+.menu-items a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ce0000;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.menu-items a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none; /* ซ่อน overlay เริ่มต้น */
+}
+
+.menu-overlay.open {
+  display: block; /* แสดง overlay เมื่อเปิดเมนู */
+}
