@@ -1,31 +1,23 @@
 import React from "react"
-import HopCoffee from "./assets/Component/HopCoffee"
-import Header from "./assets/Component/Header"
-import ProductSlider from "./assets/Component/ProductSlider"
-import Hop from "./assets/Component/Hop"
+
+import Navbar from "./assets/Component/Navbar"
+import Pre from "./assets/Component/Pre"
+import About from "./assets/Component/About"
 import Footer from "./assets/Component/Footer"
-import MenuBar from "./assets/Component/MenuBar"
+
 
 function Home() {
     return(
         <>
-        <>
-        <>
-        <>
-        <>
-<HopCoffee/>
-<Header />
-<MenuBar />
-<ProductSlider/>
-<Hop />
-<Footer />
 
-</>
-</>
-</>
-</>
-</>
+        <Navbar />
+        <Pre />
+        <About />
+        <Footer />
+
+        </>
     )
+   
 }
 
 

@@ -7,11 +7,18 @@ import About from './About.jsx'
 import Home from './Home.jsx'
 import Product from './Product.jsx'
 import Cart from './Cart.jsx'
-import MenuBar from './MenuBar.jsx'
+import Menu from './Menu.jsx'
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Home />
+  },
+  {
+    path: "App",
+    element:<App />
   },
 
   {
@@ -19,21 +26,24 @@ const router = createBrowserRouter([
     element:<About />
   },
 
+
   {
-    path: "Product",
+    path: "Product/:id",
     element:<Product />
   },
 
   {
-    path: "MenuBar",
-    element:<MenuBar />
-  },
- 
-
-  {
     path: "Cart",
     element:<Cart />
-  }
+  },
+
+  {
+    path: "Menu",
+    element:<Menu />
+  },
+ 
+  
+ 
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -1,5 +1,12 @@
 import React from "react";
- function Cart() {
+import CartComponent from "./assets/Component/CartComopnent";
 
- }
- export default Cart
+function Cart() {
+   return(
+    <>
+    <CartComponent />
+    </>
+   )
+}
+
+export default Cart
