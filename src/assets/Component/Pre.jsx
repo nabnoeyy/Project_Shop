@@ -33,7 +33,9 @@ const Pre = () => {
       <div className="pre-image">
         <img src="https://hopchafe.co.th/wp-content/uploads/2025/01/logo_hop-01.png" alt="Coffee Cup" />
       </div>
+      
     </section>
+    
   );
 };
 

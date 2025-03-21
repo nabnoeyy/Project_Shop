@@ -4,6 +4,7 @@ import Navbar from "./assets/Component/Navbar"
 import Pre from "./assets/Component/Pre"
 import About from "./assets/Component/About"
 import Footer from "./assets/Component/Footer"
+import AlbumCard from "./assets/Component/AlbumCard"
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
 
         <Navbar />
         <Pre />
+        <AlbumCard />
         <About />
         <Footer />
 

@@ -4,7 +4,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #f8f1e8;
+  background-color: #f9f5f3;
   /* background: linear-gradient(#6ac4db , #f1f195); */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -136,7 +136,6 @@ button:focus-visible {
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #d84315;
   color: white;
   font-size: 12px;
   width: 18px;
@@ -320,7 +319,8 @@ p {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  margin-top: 70px;
+ 
 }
 
 .footer-content p {
@@ -350,8 +350,8 @@ p {
   justify-content: center;
   align-items: center;
   padding: 50px;
-  margin-top: 10%;
-  background-color: #fdf6ec;
+  margin-top: 13%;
+  background-color: #fbf7f2;
 }
 
 .about-content  {
@@ -569,7 +569,7 @@ button1 {
   cursor: pointer;           /* เปลี่ยนเคอร์เซอร์เป็นมือ */
   transition: background-color 0.3s ease, transform 0.2s ease; /* การเปลี่ยนแปลงสีและเอฟเฟกต์เมื่อกด */
   display: block;
-  width: 120px;
+  width: 90px;
   margin-left: 83%;
   margin-top: 20px;
 }
@@ -654,3 +654,51 @@ button:focus {
   color: #666;
   margin-top: 6px;
 }
+
+/*AlbumCard*/
+.album-container {
+  display: flex;
+  flex-direction: row; /* ให้เรียงเป็นแถวแนวนอน */
+  gap: 45px; /* ระยะห่างระหว่างรูป */
+  justify-content: center; /* จัดให้อยู่ตรงกลาง */
+  padding: 20px;
+  margin-top: 100px;
+  align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางในแนวตั้ง */
+  flex-wrap: wrap; /* ป้องกันล้นจอถ้าหน้าจอเล็ก */
+}
+
+.album-container figure {
+  margin: 0;
+}
+
+.album-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.album-container img:hover {
+  transform: scale(1.05);
+}
+
+/* จัดตำแหน่งของ "เมนูใหม่" */
+.container-text1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.text1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #704205;
+  background-color: #ebc98a; /* สีพื้นหลังของข้อความ */
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+ 

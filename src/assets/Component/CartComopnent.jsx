@@ -68,7 +68,7 @@ const CartComponent = () => {
             </tbody>
           </table>
           <h3>ยอดรวม:  {calculateTotal()} บาท</h3>
-          <button1 onClick={handlePrint}>ปริ้น PDF</button1> {/* ปุ่มปริ้น PDF */}
+          <button1 onClick={handlePrint}>ปริ้น PDF</button1> 
         </div>
       )}
     </div>

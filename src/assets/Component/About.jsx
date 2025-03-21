@@ -5,9 +5,12 @@ const About = () => {
     
     <section className="about-container">
       
+      
       <div className="about-content">
+        
         <img src="https://hopchafe.co.th/wp-content/uploads/2025/01/e0b8abe0b8a1e0b8b5e0b980e0b8aae0b8a3e0b8b4e0b89fe0b899e0b989e0b8b3-02.png" alt="Hop Chafe Bear" className="about-image" />
         <div className="about-text">
+          
           <h2>About us</h2>
           <p>
             เราคือแบรนด์ชานมไข่มุก ที่มีจุดเด่นในเรื่องของรสชาติที่หอมหวาน
